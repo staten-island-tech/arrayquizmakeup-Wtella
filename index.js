@@ -103,10 +103,14 @@ console.log(alphabet);
 
 //Find who wrote War and Peace
 
-const wnp = books.find(author => books.name = "War and Peace");
+const wnp = books.find(function(books) {
+  if (books.name === "War and Peace")
+{
+  return true;
+
+}});
 
 console.log(wnp);
-
 
 //how many books were written before 1900?
 const nineteen = books.filter(function(books){
