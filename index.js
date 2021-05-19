@@ -119,12 +119,15 @@ console.log(nineteen);
 //was there at least one book published within the last 100 years?
 const last = books.some(books => {
   const currentYear = (new Date()).getFullYear();
-  return books.publishDate - currentYear <=100;
+  return currentYear - books.publishDate <=100;
 });
 
 console.log(last);
 
 //was every book published within the last 100 years?
-const last = 
+const all = books.every(books => {
+  const currentYear = (new Date()).getFullYear();
+  return currentYear - books.publishDate <=100;
+});
 
-//cur
+console.log(all);
