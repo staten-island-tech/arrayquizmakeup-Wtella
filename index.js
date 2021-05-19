@@ -100,7 +100,6 @@ const alphabet = books.sort(function(a, b){
 console.log(alphabet);
 
 //Find who wrote War and Peace
-
 const wnp = books.find(function(books) {
   if (books.name === "War and Peace")
 {
@@ -118,5 +117,14 @@ const nineteen = books.filter(function(books){
 console.log(nineteen);
 
 //was there at least one book published within the last 100 years?
+const last = books.some(books => {
+  const currentYear = (new Date()).getFullYear();
+  return books.publishDate - currentYear <=100;
+});
+
+console.log(last);
 
 //was every book published within the last 100 years?
+const last = 
+
+//cur
